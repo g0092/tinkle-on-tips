@@ -5,6 +5,7 @@
 	<script type="text/javascript" src="paper-full.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/1.1.28/howler.js"></script>
 	<link rel="stylesheet" type="text/css" href="circles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
 	<script type="text/paperscript" canvas="myCanvas">
 		var keyData = {
 			q: {
@@ -194,12 +195,10 @@
 </head>
 <body>
 	<canvas id="myCanvas" resize></canvas>
-
-
     <h2>Record</h2>
       		<p>
-      			<button id=record></button>
-      			<button id=stopRecord disabled>Stop</button>
+      			<button id=record>Record</button>
+      			<button id=stopRecord disabled>Stop recording</button>
       		</p>
       		<p>
       			<audio id=recordedAudio></audio>
@@ -242,51 +241,64 @@ navigator.mediaDevices.getUserMedia({audio:true})
 </script>
 <style>
 	#record {
-    background-color: red; /* Green */
-    border-width: medium;
-    border-color: black;
+    background-color: rgb(255, 29, 29); /* Green */
+    border-color:  rgb(255, 29, 29);
     color: white;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+	font-size: 16px;
+	font-family: 'Quicksand', sans-serif;
+    margin: 6px 2px;
     cursor: pointer;
     max-width: 50%;
     max-height: 15%;
-    border-radius: 50%;
+	border-radius: 5px;
     left: 100px;
     right: 100px;
 	position: relative;
+	margin-top: 0;
 }
 #stopRecord {
-  background-color: green; /* Green */
+  background-color: rgb(99, 17, 231); 
   border-width: medium;
-  border-color: black;
+  border-color: rgb(99, 17, 231);
   color: white;
-  padding: 20px;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: 'Quicksand', sans-serif;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  margin: 6px 2px;
   cursor: pointer;
   max-width: 50%;
   max-height: 15%;
-  border-radius: 50%;
   left: 100px;
   right: 100px;
   position: relative;
+  margin-top: 0;
 }
 h2 {
     left: 100px;
-    position: relative;
+	position: relative;
+	font-family: 'Quicksand', sans-serif;
+	color: white;
+	background-color: black;
 }
 #recordedAudio {
   left: 100px;
   right: 100px;
   position: relative;
+  background-color: black;
+}
+
+body {
+	background-color: black;
+	height: 100%;
+	width: 100%;
 }
 </style>
 
