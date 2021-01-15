@@ -1,4 +1,3 @@
-# tap-a-tap
+# Tinkle On Tips
 
-a simple web app that plays different sound on pressing different keys.
-also has simple animations.
+A simple web app that plays different sound on pressing different keys and also has simple animations.
